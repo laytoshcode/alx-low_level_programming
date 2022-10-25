@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _stcpy -copies the string pointed to by src
+ * _strcpy -copies the string pointed to by src
  * @dest: destination
  * @src: source
  * Return: string
@@ -16,6 +16,6 @@ char *_strcpy(char*dest. char *src)
 	}
 	
 	*(dest + len) = '\0';
-	return(dest);
+	return (dest);
 
 }
