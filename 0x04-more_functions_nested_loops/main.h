@@ -11,13 +11,5 @@ void print_line(int n);
 void print_diagonaL (int n);
 void  more_numbers(void);
 void print square (int size);
-
-
-
-
-
-
-
-
-
-
+int _putchar(char c);
+#endif
