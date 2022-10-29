@@ -1,24 +1,17 @@
 #include <stdio.h>
-
 /**
- *  *main-program entry point.
- *   *Return:0 no error, non zero if error.
- *    **/
+*main-print alpha in lower case
+*Return:Always  0
+ */
 int main(void)
 {
-	char i;
+	char lc;
 	char j;
       
-	for (i = 'a'; i <= 'z'; i++)
-
+	for (lc = 'a'; lc <= 'z'; lc++)
 	{
-	putchar(i);
-	  }
-
-	for (j = 'A'; j <= 'Z'; j++)
-     
-	putchar(j);	
-	return (0);
+	  	putchar(lc);
+	}
+		putchar('\n');
+		return (0);
 }
-
-
