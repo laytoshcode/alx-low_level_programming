@@ -1,22 +1,10 @@
 #include "main.h"
 /**
-*jack_bauer-prints all minutes in a day from 00:00
-* Return:0 if succeesful
- */
+*jack_bauer-prints every minute of the day
+*/
 void jack_bauer(void)
 {
-int i, j, k, m;
+	int hour, minutes ;
 
-		for (i = 0; i <= 2; i++)
+	for (hour = 0; hour <= 23; hour++
 			{
-                           _putchr('0');
-
-		for (j = 0; j <= 9; j++)
-
-		{
-
-		for (k = 0; k <= 5; k++)                                                       
-		
-																
-		for (m = 0; m <= 9; m++)
-		{
