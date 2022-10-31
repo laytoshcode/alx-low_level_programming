@@ -12,7 +12,7 @@ for (; uppercase <= 'Z'; uppercase++)
 {
 if (c == uppercase)
 {
-isupper = 1
+isupper = 1;
 break;
 }
 }
