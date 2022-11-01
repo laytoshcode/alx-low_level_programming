@@ -6,10 +6,13 @@
 *@size: the size of the memory to print
 *Return: Nothing  
 */
-*_memset(char *s,char b,unsigned int n)
-unsigned int a;
-for (a = 0;  a < n; a++)
+char *_memset(char *s,char b,unsigned int n)
 {
-	s[a] = b;
+int i = 0;
+for (;  n > 0; i++)
+{
+s[i] = b;
+n--;
 }
 return (s);
+}
