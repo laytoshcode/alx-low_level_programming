@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print -diasums -Prints the sum of the two diagonals
- *of a square matrix of integers
-*@a The matrix of integers
+ *print -diasums -Prints the sum of the two diagonals
+*of a square matrix of integers
+*@a:The matrix of integers
 @size: The size of the matrix
 */
 void print_diadsums(int *a ,int size)
@@ -17,6 +17,7 @@ void print_diadsums(int *a ,int size)
 	}
 
 	a -= size;
+
 	for (index = 0; index < size; index++)
 	{
 		sum2 += a[index];
