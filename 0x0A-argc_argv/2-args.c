@@ -17,7 +17,6 @@ if (argc > 0)
 {                                                                                                                   	
 printf("%s\n", argv[count]);
 }
-
 }
 
 }
