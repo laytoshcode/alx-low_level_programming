@@ -5,15 +5,16 @@
  * @h: points to the head of list
  * Return: size_t
  */
+
 size_t list_len(const list_t *h)
 {
-	int nodes = 0;
+	size_t elements = 0;
 
 	while (h)
 	{
-		nodes += 1;
+		elements++;
 		h = h->next;
 	}
-	return (nodes);
+	return (elements);
 }
 
