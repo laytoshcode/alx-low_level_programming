@@ -47,5 +47,10 @@ if (str == NULL)
 	for (r = 0; str[r]; r++)
 		
 		aaa[r] = str[r];
+	
+	return (aaa);
+		
+}
+
 		
 
