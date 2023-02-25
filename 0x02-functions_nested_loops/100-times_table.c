@@ -1,32 +1,47 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * print_to_98- A function that prints all natural numbers from n to 98,
- * followed by a new line.
- * @n: integer
+ * print_times_table - Function that prints the n times table, starting with 0.
+ * @n: an input integer.
  *
- * Numbers must be separated by a comma, followed by a space.
- * Numbers should be printed in order.
- * The first printed number should be the number passed to your function.
- * The last printed number should be 98.
- * You are allowed to use the standard library.
+ * If n is > than 15 or less than 0 the function should not print anything.
  *
- * Return: no return
-*/
+ * Return: nothing.
+ */
 
-void print_to_98(int n)
+void print_times_table(int n)
 {
-	if (n <= 98)
+	int i, d, r;
+
+	if (n >= 0 && n <= 15)
 	{
-	for (n = n; n <= 97; n++)
-		printf("%d, ", n);
+		for (i = 0; i <= n; ++i)
+		{
+			_putchar('0');
+
+			for (d = 1; d <= n; ++d)
+			{
+				_putchar(',');
+				_putchar(' ');
+
+				r = i * d;
+
+				if (r <= 99)
+					_putchar(' ');
+				if (r <= 9)
+					_putchar(' ');
+				if (r >= 100)
+				{
+					_putchar((r / 100) + '0');
+					_putchar(((r / 10)) % 10 + '0');
+				}
+				else if (r <= 99 && r >= 10)
+				{
+					_putchar((r / 10) + '0');
+				}
+				_putchar((r % 10) + '0');
+			}
+			_putchar('\n');
+		}
 	}
-	else
-	{
-	for (n = n; n > 98; n--)
-		printf("%d, ", n);
-	}
-	printf("98\n");
 }
