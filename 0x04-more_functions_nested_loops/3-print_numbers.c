@@ -1,12 +1,19 @@
 #include "main.h"
+
 /**
- * _isdigit - Function that checks for a digit (0 through 9).
- * @c: character to classify.
+ * print_numbers - Function tha prints numbers between 0 to 9,
+ * followed by a new line.
  *
- * Return: 1 if c is a digit and 0 otherwise.
+ * You can only use _putchar twice in your code.
+ *
+ * Return: no return.
  */
 
-int _isdigit(int c)
+void print_numbers(void)
 {
-	return (c >= 48 && c <= 57);
+	int ch;
+
+	for (ch = 48; ch < 58; ch++)
+		_putchar(ch);
+	_putchar('\n');
 }
