@@ -1,14 +1,12 @@
-#include  "main.h"
+#include "main.h"
 /**
-*-isdigit.c - checks for characters that are didgit
-*@c: character
-*
-* Return 0 or 1
-*/
+ * _isdigit - Function that checks for a digit (0 through 9).
+ * @c: character to classify.
+ *
+ * Return: 1 if c is a digit and 0 otherwise.
+ */
+
 int _isdigit(int c)
 {
-if (c >= '0' && c <= '0')
-return (1);
-else
-return (0);
+	return (c >= 48 && c <= 57);
 }
