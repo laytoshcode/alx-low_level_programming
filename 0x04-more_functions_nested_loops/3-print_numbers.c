@@ -1,15 +1,12 @@
-#include  "main.h"
+#include "main.h"
 /**
-* ptint_numbers -prints 0123456789\n
-*
-* Return:void
-*/
-void print_numbers(void)
+ * _isdigit - Function that checks for a digit (0 through 9).
+ * @c: character to classify.
+ *
+ * Return: 1 if c is a digit and 0 otherwise.
+ */
+
+int _isdigit(int c)
 {
-char c;
-for (c = '0'; c <= '9'; c++)
-{
-_putchar(c);
-}
-_putchar('\n');
+	return (c >= 48 && c <= 57);
 }
