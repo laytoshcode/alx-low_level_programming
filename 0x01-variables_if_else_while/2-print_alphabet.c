@@ -1,17 +1,23 @@
 #include <stdio.h>
+#include <ctype.h>
+
 /**
-*main-print alpha in lower case
-*Return:Always  0
- */
+ * main - Entry point
+ * Description: prints all alphabet in lower case
+ * Return: 0
+*/
+
 int main(void)
 {
-	char lc;
-	char j;
-	
-	for (lc = 'a'; lc <= 'z'; lc++)
+	int x;
+	int lower_x;
+
+	for (x = 'A'; x <= 'Z'; x++)
 	{
-	  	putchar(lc);
+		lower_x = tolower(x);
+		putchar(lower_x);
 	}
 		putchar('\n');
-		return (0);
+
+	return (0);
 }
