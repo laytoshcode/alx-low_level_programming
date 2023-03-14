@@ -1,89 +1,37 @@
-#include <stdlib.h>
-		
 #include "main.h"
-		
+#include <stdlib.h>
 
-		
 /**
-		
- * *_memset - fills memory with a constant byte
-		
- * @s: memory area to be filled
-		
- * @b: char to copy
-		
- * @n: number of times to copy b
-		
+ * _calloc - function that allocates memory for an array, using malloc.
+ * @nmemb: number of elements in array.
+ * @size: size of each object in array.
  *
-		
- * Return: pointer to the memory area s
-		
+ * The memory is set to zero
+ * If nmemb or size is 0, then _calloc returns NULL.
+ * If malloc fails, then _calloc returns NULL.
+ *
+ * To avoid a memory leak, the returned pointer must be deallocated,
+ * with free() or realloc() but realloc is forbidden here..
+ *
+ * Return: A pointer to the beginning of newly allocated memory (success),
+ * or NULL (failure).
  */
-		
-char *_memset(char *s, char b, unsigned int n)
-{
-		
-	unsigned int i;
-		
 
-		
-	for (i = 0; i < n; i++)
-		
-	{
-		
-		s[i] = b;
-		
-	}
-		
-
-		
-	return (s);
-		
-}
-		
-
-		
-/**
-		
- * *_calloc - allocates memory for an array
-		
- * @nmemb: number of elements in the array
-		
- * @size: size of each element
-		
-*
-		
- * Return: pointer to allocated memory
-		
- */
-		
 void *_calloc(unsigned int nmemb, unsigned int size)
-		
 {
-		
-	char *ptr;
-		
+	unsigned int i;
+	char *memAlloc;
 
-		
 	if (nmemb == 0 || size == 0)
-		
 		return (NULL);
-		
 
-		
-	ptr = malloc(size * nmemb);
-		
+	memAlloc = malloc(nmemb * size);
 
-		
-	if (ptr == NULL)
-		
+	if (memAlloc == NULL)
 		return (NULL);
-		
-		_memset(ptr,0, nmemb * size) ;
-		
-		
-	return (ptr);
-		
+
+	for (i = 0; i < nmemb * size; i++)
+		*(memAlloc + i) = 0;
+
+	return (memAlloc);
 }
-		
-
